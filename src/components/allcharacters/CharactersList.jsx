@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useCharacterContext } from "../../context/AllCharacterContext";
 import { Link } from 'react-router-dom';
 
+
 const CharacterList = () => {
     const { characterData } = useCharacterContext();
     const [searchTerm, setSearchTerm] = useState("");
@@ -35,9 +36,7 @@ const CharacterList = () => {
                     </div>
                 ))
             ) : (
-                <h1 className="text-2xl font-bold text-center mt-8">
-                    Keine passenden Charaktere gefunden.
-                </h1>
+                <img src="../../../public/img/luffy_loading.gif" className="object-center"/>
             )}
         </section>
     );
